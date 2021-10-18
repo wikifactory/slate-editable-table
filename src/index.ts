@@ -51,6 +51,16 @@ export interface EditTableCommands {
   removeTable: () => EditTableCommands & Editor;
 }
 
+export const mutations = {
+  insertAbove: insertAbove,
+  insertBelow: insertBelow,
+  insertLeft: insertLeft,
+  insertRight: insertRight,
+  removeRow: removeRow,
+  removeColumn: removeColumn,
+  removeTable: removeTable,
+};
+
 export function EditTable(options: Option = defaultOptions) {
   const opts = { ...defaultOptions, ...options } as Required<Option>;
   const ref = React.createRef<TableHandler>();
